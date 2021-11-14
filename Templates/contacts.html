@@ -18,6 +18,7 @@
         <th>email</th>
         <th>company</th>
         <th>job_title</th>
+        <th>OPERATIONS</th>
     </tr>
     {% for d in data %}
     <tr>
@@ -29,9 +30,13 @@
         <td>{{d.email}}</td>
         <td>{{d.company}}</td>
         <td>{{d.job_title}}</td>
+        <td><a href="/update/{{d.id}}" class="btn btn-success btn-lg">update</a>
+            <a href="/delete/{{d.id}}" class="btn btn-success btn-lg">delete</a></td>
     </tr>
     {% endfor %}
-</table>
+</table><br>
+<h3 style="color:cyan">To add data<a href="http://127.0.0.1:8000/inputt/">Click Here</a></h3>
 </div>
+
 </body>
 </html>
